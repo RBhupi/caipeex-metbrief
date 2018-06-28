@@ -1,0 +1,273 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Three-Column Newsletter
+% LaTeX Template
+% Version 1.0 (11/9/13)
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com) 
+% With extensive modifications by:
+% Vel (vel@latextemplates.com)
+% 
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt,a4paper]{article} % Paper type (a4paper, usletter or legal) and font size (10, 11 or 12)
+
+\setlength\topmargin{-48pt} % Top margin
+\setlength\headheight{0pt} % Header height
+\setlength\textwidth{7.0in} % Text width
+\setlength\textheight{9.5in} % Text height
+\setlength\oddsidemargin{-30pt} % Left margin
+\setlength\evensidemargin{-30pt} % Left margin (even pages) - only relevant with 'twoside' article option
+
+\usepackage{charter} % Charter font for main content
+
+\frenchspacing % Reduces space after periods to make text more compact for a three-column layout
+
+\usepackage{graphicx} % Required for including images
+\usepackage{amssymb,amsmath} % Math packages
+\usepackage{multicol} % Required for the three-column layout of the document
+\usepackage{url} % Clickable links
+\usepackage{enumitem} % Reduces the amount of space within and between lists with [noitemsep,nolistsep]
+\usepackage{marvosym} % Required for the use of symbols
+\usepackage{wrapfig} % Allows wrapping text around figures
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{datetime} % Required for defining a custom date style
+\newdateformat{mydate}{\monthname[\THEMONTH] \THEYEAR} % Set a custom date format
+\usepackage[colorlinks=false]{hyperref} % Link colors and PDF behavior in Acrobat
+\usepackage{fancyhdr} % Required to define custom headers/footers
+\pagestyle{fancy} % Enables the custom headers/footers for all pages following this
+
+%-----------------------------------------------------------
+% Header and footer
+\lfoot{\footnotesize % Left footer containing newsletter contact information
+CAIPEEX Met. brief. for \today\\
+\Mundus\ \href{http://www.tropmet.res.in/}{tropmet.res.in/} \quad
+\Telefon\ (+91) 020 xxxx  \quad
+\Letter\ \href{mailto:thara@tropmet.res.in}{thara@tropmet.res.in}
+}
+
+\cfoot{} % Empty center footer
+
+\rfoot{\footnotesize ~\\ Page \thepage} % Right footer - page counter
+
+\renewcommand{\headrulewidth}{0.0pt} % No horizontal rule for the header
+\renewcommand{\footrulewidth}{0.4pt} % Horizontal rule separating the footer from the document
+%-----------------------------------------------------------
+
+%-----------------------------------------------------------
+% Define separators
+\newcommand{\HorRule}[1]{\noindent\rule{\linewidth}{#1}} % Creates a horizontal rule
+\newcommand{\SepRule}{\noindent	% Creates a shorter separator rule
+\begin{center}
+\rule{250pt}{1pt} % Page width and rule width
+\end{center}
+}
+%-----------------------------------------------------------
+
+%-----------------------------------------------------------
+% Define title and article styles
+\newcommand{\NewsletterName}[1]{ % Newsletter title
+\begin{center}
+\Huge \usefont{T1}{fvs}{b}{n} % Use the Bera Sans Bold font
+#1
+\end{center}	
+\par \normalsize \normalfont}
+
+\newcommand{\JournalIssue}[1]{ % Date and issue number at the top of the newsletter
+\hfill \textsc{\today} % Right-aligned date and issue number
+\par \normalsize \normalfont}
+
+\newcommand{\NewsItem}[1]{ % News item title
+\usefont{T1}{fvs}{n}{n} % Use the Bera Sans Normal font
+\vspace{24pt}\large #1\vspace{3pt} % Print the title with space around it in a larger font size
+\par \normalsize \normalfont}
+
+\newcommand{\NewsAuthor}[1]{ % Author name under the item title
+\hfill by \textsc{#1} \vspace{20pt} % Right-aligned author name in small caps with space after it
+\par \normalfont}		
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\JournalIssue{4} % Issue number
+
+\NewsletterName{CAIPEEX Phase IV:\\Meteorological briefing from Pune} % Newsletter title
+
+\noindent\HorRule{3pt} \\[-0.75\baselineskip] % Thick horizontal rule
+\HorRule{1pt} % Thin horizontal rule
+
+%----------------------------------------------------------------------------------------
+%	MAIN NEWS ITEM
+%----------------------------------------------------------------------------------------
+
+\vspace{0.5cm}
+\SepRule
+\vspace{-0.5cm}
+
+\NewsItem{Highlights} % Main next item title
+\vspace{3pt} % Some extra whitespace since there is no author as for the news in the body of the newsletter
+
+{\itshape
+\begin{enumerate}
+\item Southwest monsoon further advanced into remaining parts of Maharashtra.
+\end{enumerate}
+
+
+}
+
+
+\vspace{0.5cm}
+\SepRule % Small horizontal rule after the main news item
+\vspace{0.5cm}
+
+%\setlength{\columnsep}{16pt} % Uncomment to manually change the white space between columns
+
+
+%----------------------------------------------------------------------------------------
+%	OTHER NEWS
+%----------------------------------------------------------------------------------------
+\NewsItem{Advance of Southwest Monsoon}
+\begin{multicols}{2} % Begin the three-column layout
+\begin{itemize}
+\item Southwest monsoon further advanced into some more parts of Gujarat region, some parts of East Rajasthan,
+remaining parts of Maharashtra, Chhattisgarh, Odisha, Bihar and Jharkhand, entire Madhya Pradesh and East Uttar Pradesh;
+most parts of West Uttar Pradesh, Uttrakhand and Himachal Pradesh, entire Jammu and Kashmir and some parts of Punjab. The Northern Limit of Monsoon passes through Lat. 21$^\circ$N Long. 60$^\circ$E, Lat. 21$^\circ$N/ Long. 65$^\circ$E, Veraval, Amreli, Ahmedabad, Udaipur, Sawai Madhopur, Aligarh, Tehri, Una and Amritsar.
+
+\item Conditions are favourable for further advance of Southwest Monsoon into remaining parts of Rajasthan, West Uttar Pradesh,
+Uttarakhand,Himachal Pradesh and Punjab and entire Haryana, Chandigarh and Delhi during next 48 hours.
+
+\item Premonsoon thunderstorm activity is very likely to continue over remaining parts of northwest
+India during next 24 hours.
+
+\item The Easw-West trough at mean sea level from West Rajasthan to northwest Bay of Bengal across north Madhya Pradesh,
+southeast Uttar Pradesh, Jharkhand and Odisha extending upto 1.5 km above mean sea level persists.
+
+\item The Western Disturbance as an upper air cyclonic circulation over Jammu and Kashmir and adjoining Himachal Pradesh between 3.1 and 5.8 km above mean sea level persists. 
+
+\item The cyclonic circulation over south Pakistan and adjoining West Rajasthan extending upto 0.9 km above mean sea level persists.
+
+\item The cyclonic circulation over West Madhya Pradesh and adjoining southeast Rajasthan between 2.1 \& 4.5 km above mean sea
+level persists.
+
+\item The cyclonic circulation at 5.8 km above mean sea level over south Gujarat and neighbourhood persists.
+
+\item The offshore trough at mean sea level from south Gujarat coast to north Kerala coast persists.
+
+\item The cyclonic circulation over coastal Odisha and adjoining areas of northwest Bay of Bengal and West Bengal exten
+\end{itemize}
+
+\end{multicols}
+
+
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=3in]{fig/onset_SW.png}
+\includegraphics[width=3in]{fig/seasonal-rain}
+\caption{All India monsoon progress (Left) and Seasonal rainfall (Right)}
+\end{figure}
+
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=3in, height=4in]{fig/all-india.png}
+\includegraphics[width=3in, height=4in]{fig/homo.png}
+\caption{All India  (Left) and Homogeneous rainfall (Right)}
+\end{figure}
+
+
+
+
+
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=3in]{fig/3Dasiasec_vis.jpg}
+\includegraphics[width=3in]{fig/3Dasiasec_ctbt.jpg}\\
+\includegraphics[width=3in]{fig/3Dtpw_a1}
+\caption{Visible image (Left), IR cloud top temperatures (Right) and total Precipitable water (Bottom).}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=3in, trim=8cm 1cm 3cm 1cm, clip]{fig/3D_shear.jpg}
+\includegraphics[width=3in, trim=8cm 1cm 3cm 1cm, clip]{fig/3D_midsh.jpg}
+\includegraphics[width=3in, trim=8cm 1cm 3cm 1cm, clip]{fig/3D_shten.jpg}
+\caption{Mid-level shear (Left) and shear tendency (Right).}
+\end{figure}
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=3in, trim=8cm 1cm 3cm 1cm, clip]{fig/3D_lowcon.jpg}
+\includegraphics[width=3in, trim=8cm 1cm 3cm 1cm, clip]{fig/3D_updiv.jpg}
+
+\caption{Low level convergence (Left), Upeer level divergence  (Right).}
+\end{figure}
+
+
+
+\begin{figure}[h!]
+\centering
+%trim=8cm 1cm 10cm 5cm, clip
+\includegraphics[width=3in]{fig/concwinds925-0.png}
+\includegraphics[width=3in]{fig/aod10days-0.png}
+\caption{Dust Forecast (Left) and Aerosol  Optical Depth (Right)}
+\end{figure}
+
+
+
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=6in, trim={0 3cm 0 0}]{fig/soilm_7days.png}
+\caption{Soil moisture}
+\end{figure}
+
+
+
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=3in]{fig/ncum_fcst_Tmax_day-1.png}
+\includegraphics[width=3in]{fig/ncum_fcst_Tmin_day-1.png}
+\caption{Maximum and minimum temperature}
+\end{figure}
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=6in]{fig/ncum_fcst_Tmax_tend.png}\\
+\vskip 0.5cm
+\includegraphics[width=6in]{fig/ncum_fcst_Tmin_tend.png}
+\caption{Maximum (Top) and minimum (bottom) 2m temperature Tendency}
+\end{figure}
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=6in]{fig/SOLAPUR.png}\\
+\caption{Solapur}
+\end{figure}
+
+%----------------------------------------------------------------------------------------
+
+\end{document} 
