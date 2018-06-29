@@ -46,7 +46,7 @@
 \usepackage[colorlinks=false]{hyperref} % Link colors and PDF behavior in Acrobat
 \usepackage{fancyhdr} % Required to define custom headers/footers
 \pagestyle{fancy} % Enables the custom headers/footers for all pages following this
-
+\usepackage{float}
 %-----------------------------------------------------------
 % Header and footer
 \lfoot{\footnotesize % Left footer containing newsletter contact information
@@ -104,7 +104,7 @@ CAIPEEX Met. brief. for \today\\
 
 \JournalIssue{4} % Issue number
 
-\NewsletterName{CAIPEEX Phase IV:\\Meteorological briefing from Pune} % Newsletter title
+\NewsletterName{\Large{CAIPEEX Phase IV:\\Meteorological briefing from Pune}} % Newsletter title
 
 \noindent\HorRule{3pt} \\[-0.75\baselineskip] % Thick horizontal rule
 \HorRule{1pt} % Thin horizontal rule
@@ -128,6 +128,7 @@ CAIPEEX Met. brief. for \today\\
 
 }
 
+\tableofcontents
 
 \vspace{0.5cm}
 \SepRule % Small horizontal rule after the main news item
@@ -139,7 +140,8 @@ CAIPEEX Met. brief. for \today\\
 %----------------------------------------------------------------------------------------
 %	OTHER NEWS
 %----------------------------------------------------------------------------------------
-\NewsItem{Advance of Southwest Monsoon}
+
+\section{Give some name to this section}
 \begin{multicols}{2} % Begin the three-column layout
 \begin{itemize}
 \item Southwest monsoon further advanced into some more parts of Gujarat region, some parts of East Rajasthan,
@@ -172,9 +174,8 @@ level persists.
 \end{multicols}
 
 
-
-
-\begin{figure}[h!]
+\section{Advance of Southwest Monsoon}
+\begin{figure}[H]
 \centering
 \includegraphics[width=3in]{fig/onset_SW.png}
 \includegraphics[width=3in]{fig/seasonal-rain}
@@ -183,7 +184,7 @@ level persists.
 
 
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \includegraphics[width=3in, height=4in]{fig/all-india.png}
 \includegraphics[width=3in, height=4in]{fig/homo.png}
@@ -191,29 +192,29 @@ level persists.
 \end{figure}
 
 
+\section{Large-scale Features}
 
 
+\subsection{Satellite View}
 
-
-
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \includegraphics[width=3in]{fig/3Dasiasec_vis.jpg}
 \includegraphics[width=3in]{fig/3Dasiasec_ctbt.jpg}\\
-\includegraphics[width=3in]{fig/3Dtpw_a1}
+%\includegraphics[width=3in]{fig/3Dtpw_a1}
 \caption{Visible image (Left), IR cloud top temperatures (Right) and total Precipitable water (Bottom).}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
-\includegraphics[width=3in, trim=8cm 1cm 3cm 1cm, clip]{fig/3D_shear.jpg}
+%\includegraphics[width=3in, trim=8cm 1cm 3cm 1cm, clip]{fig/3D_shear.jpg}
 \includegraphics[width=3in, trim=8cm 1cm 3cm 1cm, clip]{fig/3D_midsh.jpg}
 \includegraphics[width=3in, trim=8cm 1cm 3cm 1cm, clip]{fig/3D_shten.jpg}
 \caption{Mid-level shear (Left) and shear tendency (Right).}
 \end{figure}
 
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \includegraphics[width=3in, trim=8cm 1cm 3cm 1cm, clip]{fig/3D_lowcon.jpg}
 \includegraphics[width=3in, trim=8cm 1cm 3cm 1cm, clip]{fig/3D_updiv.jpg}
@@ -221,9 +222,75 @@ level persists.
 \caption{Low level convergence (Left), Upeer level divergence  (Right).}
 \end{figure}
 
+\section{Forecast}
+\subsection{GFS Wind Forecast}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=3in]{fig/con-spr-wind_zonal850-0.png}
+\includegraphics[width=3in]{fig/con-spr-wind_zonal200-0.png}
+\caption{GFS Forecast.}
+\end{figure}
 
 
-\begin{figure}[h!]
+\subsection{NUCM Forecast}
+\begin{figure}[H]
+\centering
+\includegraphics[width=3in]{fig/ncum_fcst_Tmax_day-1.png}
+\includegraphics[width=3in]{fig/ncum_fcst_Tmin_day-1.png}
+\caption{Maximum and minimum temperature}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=6in]{fig/ncum_fcst_Tmax_tend.png}\\
+\vskip 0.5cm
+\includegraphics[width=6in]{fig/ncum_fcst_Tmin_tend.png}
+\caption{Maximum (Top) and minimum (bottom) 2m temperature Tendency}
+\end{figure}
+
+
+
+\subsection{IMD WRF forecast}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=3in, trim=20cm 5cm 10cm 4cm, clip]{fig/WRFd02-03-RAIN_06.png}
+\includegraphics[width=3in, trim=20cm 5cm 10cm 4cm, clip]{fig/WRFd02-ZWd850_06.png}
+\includegraphics[width=3in, trim=20cm 5cm 10cm 4cm, clip]{fig/WRFd02-ZWd500_06.png}
+\includegraphics[width=3in, trim=20cm 5cm 10cm 4cm, clip]{fig/WRFd02-ZWd200_06.png}
+\caption{WRF Forecast.}
+\end{figure}
+
+
+
+
+
+
+
+\section{Thermodynamics (Observations and Forecast) }
+\begin{figure}[H]
+\centering
+\fbox{\includegraphics[width=3in, trim=15cm 5cm 8cm 10cm, clip]{fig/WRFd01-CAPE_06.png}} \hskip 0.1cm
+%
+\fbox{\includegraphics[width=3in, trim=15cm 5cm 8cm 10cm, clip]{fig/WRFd01-CIN_06.png}}\\
+\vskip 0.1cm
+\fbox{\includegraphics[width=3in, trim=15cm 5cm 8cm 10cm, clip]{fig/WRFd01-LCL_06.png}}
+\caption{IMD Forecast products CAPE (left), CINE (right) and  LCLH (bottom)}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=6in]{fig/SOLAPUR.png}\\
+\caption{Solapur}
+\end{figure}
+
+
+
+
+\begin{figure}[H]
 \centering
 %trim=8cm 1cm 10cm 5cm, clip
 \includegraphics[width=3in]{fig/concwinds925-0.png}
@@ -235,7 +302,7 @@ level persists.
 
 
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \includegraphics[width=6in, trim={0 3cm 0 0}]{fig/soilm_7days.png}
 \caption{Soil moisture}
@@ -244,29 +311,6 @@ level persists.
 
 
 
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=3in]{fig/ncum_fcst_Tmax_day-1.png}
-\includegraphics[width=3in]{fig/ncum_fcst_Tmin_day-1.png}
-\caption{Maximum and minimum temperature}
-\end{figure}
-
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=6in]{fig/ncum_fcst_Tmax_tend.png}\\
-\vskip 0.5cm
-\includegraphics[width=6in]{fig/ncum_fcst_Tmin_tend.png}
-\caption{Maximum (Top) and minimum (bottom) 2m temperature Tendency}
-\end{figure}
-
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=6in]{fig/SOLAPUR.png}\\
-\caption{Solapur}
-\end{figure}
 
 %----------------------------------------------------------------------------------------
 

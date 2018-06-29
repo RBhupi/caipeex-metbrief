@@ -48,6 +48,21 @@ wget -nc http://satellite.imd.gov.in/dynamic/satbltn.pdf
 wget -nc http://satellite.imd.gov.in/img/SOLAPUR.gif
 convert SOLAPUR.gif SOLAPUR.png
 
+#IMD forecast Product
+wget -nc http://nwp.imd.gov.in/wrf/WRFd01-CAPE_06.png 
+wget -nc http://nwp.imd.gov.in/wrf/WRFd01-CIN_06.png
+wget -nc http://nwp.imd.gov.in/wrf/WRFd01-LCL_06.png 
+
+
+#GFS Forecast
+wget -nc http://nwp.imd.gov.in/gefs/con-spr-wind_zonal850-0.png
+wget -nc http://nwp.imd.gov.in/gefs/con-spr-wind_zonal200-0.png
+
+#IMD WRF forecast
+wget -nc http://nwp.imd.gov.in/wrf/WRFd02-03-RAIN_06.png
+wget -nc http://nwp.imd.gov.in/wrf/WRFd02-ZWd850_06.png
+wget -nc http://nwp.imd.gov.in/wrf/WRFd02-ZWd200_06.png
+wget -nc http://nwp.imd.gov.in/wrf/WRFd02-ZWd500_06.png
 
 cd ..
 
