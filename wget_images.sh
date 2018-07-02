@@ -64,6 +64,19 @@ wget -nc http://nwp.imd.gov.in/wrf/WRFd02-ZWd850_06.png
 wget -nc http://nwp.imd.gov.in/wrf/WRFd02-ZWd200_06.png
 wget -nc http://nwp.imd.gov.in/wrf/WRFd02-ZWd500_06.png
 
+#Solapur WRF forecast from Gayatri
+DATE=`date -d "today 13:00" '+%Y%m%d'`
+wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/skew/Solapur.000010.png
+wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/skew/Tuljapur.000010.png
+wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/cape/cape.000010.png
+wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/cine/cine.000013.png
+wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/mdbz/mdbz.000013.png
+wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/WLD/wld.000013.png
+wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/precit/precipt.000012.png
+wget http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/lclh/lcl.000013.png
+
+
+
 cd ..
 
 pdflatex metbrief.tex
