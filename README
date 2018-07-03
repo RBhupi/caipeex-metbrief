@@ -1,0 +1,34 @@
+1. delete ./fig Folder or move it to ./past_figs/
+
+2. run sh ./wget_images.sh
+
+3. Keeep watching the terminal while downloading images, to know any unavailable images. If suspect missing images, scroll up and down to check for downloading logs images. 
+ 
+4. If pdflatex stops at some point check for which missing image it is stopping and press enter to skip.
+
+5. Now download following figures manualy in .png format and crop them to apporpriate size.
+	*the figures should have same path anf ile name as follow.
+	./manual_fig/backward.pdf    #backward trajectory. Do not crop save as pdf
+	./manual_fig/forward.pdf	#forward trajectory. Do not crop save as pdf
+	./manual_fig/radar24.png	#24hr radar accumulation from IMD in png. crop
+	./manual_fig/radarppi.png	# radar ppi from IMD
+	./manual_fig/rapid.png		#rapid figure for mid-level moisture png
+
+	5.1 To download Rapid go to rapid.imd.gov.in
+		-select INSAT 3D sounder
+		-product geophysical
+		-L2, Precipitable water
+
+6. run pdflatex metbrief.tex and check that all the figures are present. If latex stops for any figure press enter to skip that figure.
+
+7. Go to the text folder to write your analysis in the following sections
+	./text/IMD_summary.tex
+	./text/outlook.tex
+Only replace the text one line at a time. Do not paste whole sections at once.
+
+degrees=$^\circ$  for example 26 $^\circ$C
+
+Do not write following symbols or similar in your text:
+# 	$	 % 	& 	\ 	^ 	_ 	~ 
+
+
