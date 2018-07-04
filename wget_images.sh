@@ -37,8 +37,8 @@ wget -nc http://www.ncmrwf.gov.in/Data/mihir/$DATE/NCUM-Outputs/Temperature/ncum
 
 #download satellite products from IMD 
 wget -nc http://satellite.imd.gov.in/img/3DRasiasec_vis.jpg
-#wget -nc satellite.imd.gov.in/img/3Dasiasec_ctbt.jpg
-wget -nc http://satellite.imd.gov.in/img/3DRasiasec_bt1.jpg
+wget -nc satellite.imd.gov.in/img/3Dasiasec_ctbt.jpg
+#wget -nc http://satellite.imd.gov.in/img/3DRasiasec_bt1.jpg
 #wget -nc http://satellite.imd.gov.in/img/3Dtpw_a1.jpg 
 #wget -nc http://satellite.imd.gov.in/img/3D_shear.jpg 
 #wget -nc http://satellite.imd.gov.in/img/3D_shten.jpg 
@@ -76,27 +76,27 @@ convert AGD-meteogram.gif AGD-meteogram.png
 
 
 #Solapur WRF forecast from Gayatri
-DATE=`date -d "today 13:00" '+%Y%m%d'`
+DATE=`date -d "yesterday 13:00" '+%Y%m%d'`
 
-wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/skew/Solapur.000010.png
-wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/skew/Aurangabad.000010.png
+wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/skew/Solapur.000016.png
+wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/skew/Aurangabad.000016.png
 
-wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/skew/Solapur.000012.png
-wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/skew/Aurangabad.000012.png
+wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/skew/Solapur.000018.png
+wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/skew/Aurangabad.000018.png
 
-wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/cape/cape.000013.png
-wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/cine/cine.000013.png
-wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/mdbz/mdbz.000013.png
-wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/WLD/wld.000013.png
-wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/precit/precipt.000012.png
-wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/lclh/lcl.000013.png
+wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/cape/cape.000019.png
+wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/cine/cine.000019.png
+wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/mdbz/mdbz.000019.png
+wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/WLD/wld.000019.png
+wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/precit/precipt.000018.png
+wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/lclh/lcl.000019.png
 
-wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/cape/cape.000015.png
-wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/cine/cine.000015.png
-wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/mdbz/mdbz.000015.png
-wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/WLD/wld.000015.png
-wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/precit/precipt.000014.png
-wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/lclh/lcl.000015.png
+wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/cape/cape.000021.png
+wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/cine/cine.000021.png
+wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/mdbz/mdbz.000021.png
+wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/WLD/wld.000021.png
+wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/precit/precipt.000020.png
+wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/lclh/lcl.000021.png
 
 #Get Solapur data figures 
 
