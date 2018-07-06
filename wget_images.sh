@@ -104,5 +104,5 @@ wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/lclh/lcl.000021.png
 
 cd ..
 wget -N http://www.imd.gov.in/section/nhac/dynamic/allindianew.pdf
-wget -N http://satellite.imd.gov.in/dynamic/satbltn.pdf 
+wget -N http://satellite.imd.gov.in/dynamic/satbltn.pdf
 pdflatex metbrief.tex
