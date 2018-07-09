@@ -2,6 +2,9 @@
 #' @author Bhupendra Raut
 #' June 28, 2018
 
+wget http://www.imd.gov.in/section/nhac/dynamic/allindianew.pdf
+wget http://satellite.imd.gov.in/dynamic/satbltn.pdf
+
 mkdir fig
 cd fig
 
@@ -38,13 +41,14 @@ wget -nc http://www.ncmrwf.gov.in/Data/mihir/$DATE/NCUM-Outputs/Temperature/ncum
 #download satellite products from IMD 
 wget -nc http://satellite.imd.gov.in/img/3DRasiasec_vis.jpg
 wget -nc satellite.imd.gov.in/img/3Dasiasec_ctbt.jpg
+wget -nc http://satellite.imd.gov.in/img/3Dhum_prof620_a1.jpg
 #wget -nc http://satellite.imd.gov.in/img/3DRasiasec_bt1.jpg
 #wget -nc http://satellite.imd.gov.in/img/3Dtpw_a1.jpg 
 #wget -nc http://satellite.imd.gov.in/img/3D_shear.jpg 
 #wget -nc http://satellite.imd.gov.in/img/3D_shten.jpg 
-wget -nc http://satellite.imd.gov.in/img/3D_midsh.jpg 
-wget -nc http://satellite.imd.gov.in/img/3D_lowcon.jpg 
-wget -nc http://satellite.imd.gov.in/img/3D_updiv.jpg 
+#wget -nc http://satellite.imd.gov.in/img/3D_midsh.jpg 
+#wget -nc http://satellite.imd.gov.in/img/3D_lowcon.jpg 
+#wget -nc http://satellite.imd.gov.in/img/3D_updiv.jpg 
 #wget -nc http://satellite.imd.gov.in/img/3D_updiv.jpg 
 #wget -nc http://satellite.imd.gov.in/img/3Dasianew.jpg 
 
@@ -103,6 +107,5 @@ wget -nc http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/lclh/lcl.000021.png
 
 
 cd ..
-wget -N http://www.imd.gov.in/section/nhac/dynamic/allindianew.pdf
-wget -N http://satellite.imd.gov.in/dynamic/satbltn.pdf
+
 pdflatex metbrief.tex
