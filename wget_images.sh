@@ -20,8 +20,8 @@ convert concwinds925.gif concwinds925.png
 curl -O http://www.ncmrwf.gov.in/Data/mihir/Dust-Forecast/aod10days.gif
 convert aod10days.gif aod10days.png 
 
-curl -O http://www.ncmrwf.gov.in/Data/mihir/Soil-Moisture/soilm_7days.gif
-convert soilm_7days.gif soilm_7days.png 
+#curl -O http://www.ncmrwf.gov.in/Data/mihir/Soil-Moisture/soilm_7days.gif
+#convert soilm_7days.gif soilm_7days.png 
 
 curl -O http://imdpune.gov.in/Seasons/Pre_Monsoon/all-india.gif
 convert all-india.gif all-india.png
@@ -31,9 +31,9 @@ convert homo.gif homo.png
 curl -O http://nwp.imd.gov.in/gefs/mslp_avg_spr-24.png
 
 #Download Yesterday's data for todays forecast fields from NCMRWF
-DATE=`date -d "yesterday 13:00" '+%Y-%m-%d'`
-curl -O http://www.ncmrwf.gov.in/Data/mihir/$DATE/NCUM-Outputs/Temperature/ncum_fcst_Tmax_day-1.png
-curl -O http://www.ncmrwf.gov.in/Data/mihir/$DATE/NCUM-Outputs/Temperature/ncum_fcst_Tmin_day-1.png
+DATE=$(date -v -1d '+%Y%m%d')
+#curl -O http://www.ncmrwf.gov.in/Data/mihir/$DATE/NCUM-Outputs/Temperature/ncum_fcst_Tmax_day-1.png
+#curl -O http://www.ncmrwf.gov.in/Data/mihir/$DATE/NCUM-Outputs/Temperature/ncum_fcst_Tmin_day-1.png
 #curl -O http://www.ncmrwf.gov.in/Data/mihir/Temp-Tendency/ncum_fcst_Tmax_tend.png
 #curl -O http://www.ncmrwf.gov.in/Data/mihir/Temp-Tendency/ncum_fcst_Tmin_tend.png
 
@@ -53,8 +53,8 @@ curl -O http://satellite.imd.gov.in/img/3Dhum_prof620_a1.jpg
 #curl -O http://satellite.imd.gov.in/img/3Dasianew.jpg 
 
 
-curl -O http://satellite.imd.gov.in/img/SOLAPUR.gif
-convert SOLAPUR.gif SOLAPUR.png
+#curl -O http://satellite.imd.gov.in/img/SOLAPUR.gif
+#convert SOLAPUR.gif SOLAPUR.png
 
 #IMD forecast Product
 curl -O http://nwp.imd.gov.in/wrf/WRFd01-CAPE_06.png 
@@ -63,14 +63,14 @@ curl -O http://nwp.imd.gov.in/wrf/WRFd01-LCL_06.png
 
 
 #GFS Forecast
-curl -O http://nwp.imd.gov.in/gefs/con-spr-wind_zonal850-0.png
-curl -O http://nwp.imd.gov.in/gefs/con-spr-wind_zonal200-0.png
+#curl -O http://nwp.imd.gov.in/gefs/con-spr-wind_zonal850-0.png
+#curl -O http://nwp.imd.gov.in/gefs/con-spr-wind_zonal200-0.png
 
 #IMD WRF forecast
-curl -O http://nwp.imd.gov.in/wrf/WRFd02-03-RAIN_06.png
+#curl -O http://nwp.imd.gov.in/wrf/WRFd02-03-RAIN_06.png
 curl -O http://nwp.imd.gov.in/wrf/WRFd02-ZWd850_06.png
 curl -O http://nwp.imd.gov.in/wrf/WRFd02-ZWd200_06.png
-curl -O http://nwp.imd.gov.in/wrf/WRFd02-ZWd500_06.png
+#curl -O http://nwp.imd.gov.in/wrf/WRFd02-ZWd500_06.png
 
 #IMD Meteogram
 curl -O http://nwp.imd.gov.in/gfs/gfs_meteograms/SLP-meteogram.gif
@@ -80,8 +80,7 @@ convert AGD-meteogram.gif AGD-meteogram.png
 
 
 #Solapur WRF forecast from Gayatri
-DATE=`date -d "yesterday 13:00" '+%Y%m%d'`
-
+DATE=$(date -v -1d '+%Y%m%d')
 curl -O http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/skew/Solapur.000016.png
 curl -O http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/skew/Aurangabad.000016.png
 
