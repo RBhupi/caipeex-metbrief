@@ -2,15 +2,15 @@
 #' @author Bhupendra Raut
 #' June 28, 2018
 
-curl -O http://www.imd.gov.in/section/nhac/dynamic/allindianew.pdf
-curl -O http://satellite.imd.gov.in/dynamic/satbltn.pdf
+#curl -O http://www.imd.gov.in/section/nhac/dynamic/allindianew.pdf
+#curl -O http://satellite.imd.gov.in/dynamic/satbltn.pdf
 
 mkdir fig
 cd fig
 
 #Get all the Figures in ./fig Directory
-#curl -O http://imdpune.gov.in/Seasons/Pre_Monsoon/onset_SW.gif
-#convert onset_SW.gif onset_SW.png
+curl -O http://imdpune.gov.in/Seasons/Pre_Monsoon/onset_SW.gif
+convert onset_SW.gif onset_SW.png
 
 curl -O http://imdpune.gov.in/Seasons/Pre_Monsoon/seasonal-rain.jpg
 
@@ -23,10 +23,10 @@ convert aod10days.gif aod10days.png
 #curl -O http://www.ncmrwf.gov.in/Data/mihir/Soil-Moisture/soilm_7days.gif
 #convert soilm_7days.gif soilm_7days.png 
 
-curl -O http://imdpune.gov.in/Seasons/Pre_Monsoon/all-india.gif
-convert all-india.gif all-india.png
-curl -O http://imdpune.gov.in/Seasons/Pre_Monsoon/homo.gif 
-convert homo.gif homo.png 
+#curl -O http://imdpune.gov.in/Seasons/Pre_Monsoon/all-india.gif
+#convert all-india.gif all-india.png
+#curl -O http://imdpune.gov.in/Seasons/Pre_Monsoon/homo.gif 
+#convert homo.gif homo.png 
 
 curl -O http://nwp.imd.gov.in/gefs/mslp_avg_spr-24.png
 
@@ -39,7 +39,7 @@ DATE=$(date -v -1d '+%Y%m%d')
 
 
 #download satellite products from IMD 
-curl -O http://satellite.imd.gov.in/img/3DRasiasec_vis.jpg
+#curl -O http://satellite.imd.gov.in/img/3DRasiasec_vis.jpg
 curl -O satellite.imd.gov.in/img/3Dasiasec_ctbt.jpg
 curl -O http://satellite.imd.gov.in/img/3Dhum_prof620_a1.jpg
 #curl -O http://satellite.imd.gov.in/img/3DRasiasec_bt1.jpg
@@ -69,8 +69,8 @@ curl -O http://nwp.imd.gov.in/wrf/WRFd01-LCL_06.png
 #IMD WRF forecast
 #curl -O http://nwp.imd.gov.in/wrf/WRFd02-03-RAIN_06.png
 curl -O http://nwp.imd.gov.in/wrf/WRFd02-ZWd850_06.png
-curl -O http://nwp.imd.gov.in/wrf/WRFd02-ZWd200_06.png
-#curl -O http://nwp.imd.gov.in/wrf/WRFd02-ZWd500_06.png
+#curl -O http://nwp.imd.gov.in/wrf/WRFd02-ZWd200_06.png
+curl -O http://nwp.imd.gov.in/wrf/WRFd02-ZWd500_06.png
 
 #IMD Meteogram
 curl -O http://nwp.imd.gov.in/gfs/gfs_meteograms/SLP-meteogram.gif
@@ -101,8 +101,13 @@ curl -O http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/WLD/wld.000021.png
 curl -O http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/precit/precipt.000020.png
 curl -O http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/lclh/lcl.000021.png
 
-#Get Solapur data figures 
-
+#Get Solapur data figures
+cd ../fig_obs
+DATE=$(date '+%Y-%m-%d')
+#curl -O http://103.251.186.33/~caipeex/solapur/rsonde/skewT_25062018.png
+curl -O http://103.251.186.33/~caipeex/rainfall/rain-gauge_output_$DATE.pdf
+rm -rv rain-gauge_output.pdf
+mv -v rain-gauge_output_$DATE.pdf rain-gauge_output.pdf
 
 
 cd ..

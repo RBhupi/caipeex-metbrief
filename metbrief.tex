@@ -20,40 +20,26 @@
 %	PACKAGES AND DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[10pt,usletter]{article} % Paper type (a4paper, usletter or legal) and font size (10, 11 or 12)
-
-\setlength\topmargin{-48pt} % Top margin
-\setlength\headheight{0pt} % Header height
-\setlength\textwidth{7.0in} % Text width
-\setlength\textheight{9.5in} % Text height
-\setlength\oddsidemargin{-30pt} % Left margin
-\setlength\evensidemargin{-30pt} % Left margin (even pages) - only relevant with 'twoside' article option
-
-\usepackage{charter} % Charter font for main content
-
-\frenchspacing % Reduces space after periods to make text more compact for a three-column layout
+\documentclass[12pt,a4paper]{article} % Paper type (a4paper, usletter or legal) and font size (10, 11 or 12)
 
 \usepackage{graphicx} % Required for including images
 \usepackage{amssymb,amsmath} % Math packages
 \usepackage{multicol} % Required for the three-column layout of the document
 \usepackage{url} % Clickable links
-\usepackage{enumitem} % Reduces the amount of space within and between lists with [noitemsep,nolistsep]
-\usepackage{marvosym} % Required for the use of symbols
-\usepackage{wrapfig} % Allows wrapping text around figures
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage{datetime} % Required for defining a custom date style
-\newdateformat{mydate}{\monthname[\THEMONTH] \THEYEAR} % Set a custom date format
 \usepackage[hidelinks]{hyperref} % Link colors and PDF behavior in Acrobat
 \usepackage{fancyhdr} % Required to define custom headers/footers
 \pagestyle{fancy} % Enables the custom headers/footers for all pages following this
 \usepackage{float}
+\usepackage[margin=0.5in, landscape]{geometry}
+
+
+\fancyfoot[C]{\thepage}                                                                                                                                                                                                                                           
+
 %-----------------------------------------------------------
 % Header and footer
 \lfoot{\footnotesize % Left footer containing newsletter contact information
 CAIPEEX Met. brief. for \today\\
-\Mundus\ \href{http://www.tropmet.res.in/}{tropmet.res.in/} \quad
-\Telefon\ (+91) 020 xxxx  \quad
-\Letter\ \href{mailto:thara@tropmet.res.in}{thara@tropmet.res.in}
+\href{http://www.tropmet.res.in/}{tropmet.res.in/}
 }
 
 \cfoot{} % Empty center footer
@@ -76,34 +62,13 @@ CAIPEEX Met. brief. for \today\\
 %-----------------------------------------------------------
 
 %-----------------------------------------------------------
-% Define title and article styles
-\newcommand{\NewsletterName}[1]{ % Newsletter title
-\begin{center}
-\Huge \usefont{T1}{fvs}{b}{n} % Use the Bera Sans Bold font
-#1
-\end{center}	
-\par \normalsize \normalfont}
-
-\newcommand{\JournalIssue}[1]{ % Date and issue number at the top of the newsletter
-\hfill \textsc{\today} % Right-aligned date and issue number
-\par \normalsize \normalfont}
-
-\newcommand{\NewsItem}[1]{ % News item title
-\usefont{T1}{fvs}{n}{n} % Use the Bera Sans Normal font
-\vspace{24pt}\large #1\vspace{3pt} % Print the title with space around it in a larger font size
-\par \normalsize \normalfont}
-
-\newcommand{\NewsAuthor}[1]{ % Author name under the item title
-\hfill by \textsc{#1} \vspace{20pt} % Right-aligned author name in small caps with space after it
-\par \normalfont}		
 
 %----------------------------------------------------------------------------------------
 %	TITLE
 %----------------------------------------------------------------------------------------
-
+\title{CAIPEEX Phase IV: Meteorological Briefing}% from Pune} % Newsletter title
 \begin{document}
-\JournalIssue{4} % Issue number
-\NewsletterName{\Large{CAIPEEX Phase IV:\\Meteorological briefing from Pune}} % Newsletter title
+\maketitle
 
 \noindent\HorRule{3pt} \\[-0.75\baselineskip] % Thick horizontal rule
 \HorRule{1pt} % Thin horizontal rule
@@ -126,12 +91,10 @@ CAIPEEX Met. brief. for \today\\
 
 
 %}
-
+\begin{multicols}{3} % Begin the three-column layout
 \tableofcontents
-
-%\vspace{0.5cm}
-%\SepRule % Small horizontal rule after the main news item
-%\vspace{0.5cm}
+\SepRule % Small horizontal rule after the main news item
+\vspace{0.3cm}
 
 %\setlength{\columnsep}{16pt} % Uncomment to manually change the white space between columns
 
@@ -140,8 +103,9 @@ CAIPEEX Met. brief. for \today\\
 %	OTHER NEWS
 %----------------------------------------------------------------------------------------
 
-\section{Monsoon Features based on 05:30 IST  Analysis}
-\begin{multicols}{2} % Begin the three-column layout
+\vfill
+\section{Monsoon Features based on 05:30 IST Analysis}
+
 \begin{itemize}
 \input{./text/IMD_summary.tex}
 \end{itemize}
@@ -151,9 +115,9 @@ CAIPEEX Met. brief. for \today\\
 \begin{figure}[H]
 \centering
 %\includegraphics[width=3in]{fig/onset_SW.png}
-\includegraphics[width=3in, height=4in]{fig/seasonal-rain}
-\includegraphics[width=3.5in, height=4in]{fig/mslp_avg_spr-24}
-\caption{Seasonal rainfall and MSLP analysis.}
+\includegraphics[width=5in, height=6in]{fig/seasonal-rain}
+\includegraphics[width=5in, height=6in]{fig/onset_SW}
+\caption{Seasonal rainfall and Monsoon onset dates (normal and actual).}
 \end{figure}
 
 
@@ -171,10 +135,10 @@ CAIPEEX Met. brief. for \today\\
 \section{Satellite Inference}
 \begin{figure}[H]
 \centering
-\includegraphics[width=3in]{fig/3Dasiasec_ctbt}
-\includegraphics[width=3in]{fig/3Dhum_prof620_a1}
+\includegraphics[width=5in]{fig/3Dasiasec_ctbt}
+\includegraphics[width=5in, height=6in]{fig/mslp_avg_spr-24}
 %\includegraphics[width=3in]{fig/3Dtpw_a1}
-\caption{IR cloud top temperatures and mid-level moisture from INSAT Rapid product.}
+\caption{IR cloud top temperatures and MSLP analysis.}
 \end{figure}
 
 %\begin{figure}[H]
@@ -220,8 +184,8 @@ CAIPEEX Met. brief. for \today\\
 \begin{figure}[H]
 \centering
 %\includegraphics[width=2.5in, height=2.5in, trim=20cm 5cm 10cm 4cm, clip]{fig/WRFd02-03-RAIN_06.png}
-\includegraphics[width=2.5in, height=2.5in, trim=20cm 5cm 10cm 4cm, clip]{fig/WRFd02-ZWd850_06.png}
-\includegraphics[width=2.5in, height=2.5in, trim=20cm 5cm 10cm 4cm, clip]{fig/WRFd02-ZWd500_06.png}
+\includegraphics[width=5in, height=6in, trim=20cm 5cm 10cm 4cm, clip]{fig/WRFd02-ZWd850_06.png}
+\includegraphics[width=5in, height=6in, trim=20cm 5cm 10cm 4cm, clip]{fig/WRFd02-ZWd500_06.png}
 %\includegraphics[width=2.5in, height=2.5in, trim=20cm 5cm 10cm 4cm, clip]{fig/WRFd02-ZWd200_06.png}
 \caption{Geopotential height, wind and isotach at 850 hPa, 500 hPa.}
 \end{figure}
@@ -232,16 +196,16 @@ CAIPEEX Met. brief. for \today\\
 
 
 
-\subsection*{Thermodynamics Forecast}% (Observations and Forecast) }
-\begin{figure}[H]
-\centering
-\fbox{\includegraphics[width=3in, trim=15cm 5cm 8cm 10cm, clip]{fig/WRFd01-CAPE_06.png}} \hskip 0.1cm
+%\subsection*{IMD Thermodynamics Forecast (CAPE, CINE, LCLH)}% (Observations and Forecast) }
+%\begin{figure}[H]
+%\centering
+%\fbox{\includegraphics[width=5in, trim=15cm 5cm 8cm 10cm, clip]{fig/WRFd01-CAPE_06.png}} \hskip 0.1cm
 %
-\fbox{\includegraphics[width=3in, trim=15cm 5cm 8cm 10cm, clip]{fig/WRFd01-CIN_06.png}}\\
-\vskip 0.1cm
-\fbox{\includegraphics[width=3in, trim=15cm 5cm 8cm 10cm, clip]{fig/WRFd01-LCL_06.png}}
-\caption{IMD Forecast products CAPE (left), CINE (right) and  LCLH (bottom)}
-\end{figure}
+%\fbox{\includegraphics[width=5in, trim=15cm 5cm 8cm 10cm, clip]{fig/WRFd01-CIN_06.png}}\\
+%\vskip 0.1cm
+%\fbox{\includegraphics[width=5in, trim=15cm 5cm 8cm 10cm, clip]{fig/WRFd01-LCL_06.png}}
+%\caption{IMD Forecast products CAPE (left), CINE (right) and  LCLH (bottom)}
+%\end{figure}
 
 
 %\begin{figure}[H]
@@ -255,26 +219,26 @@ CAIPEEX Met. brief. for \today\\
 \begin{figure}[H]
 \centering
 %trim=8cm 1cm 10cm 5cm, clip
-\includegraphics[width=3in, height=6in, trim=0 0 25cm 0, clip]{fig/AGD-meteogram.png}
-\includegraphics[width=3in, height=6in, trim=0 0 25cm 0, clip]{fig/SLP-meteogram.png}
+\includegraphics[width=3in, height=6in, trim=0 0 25cm 0, clip]{fig/AGD-meteogram.pdf}
+\includegraphics[width=3in, height=6in, trim=0 0 25cm 0, clip]{fig/SLP-meteogram}
 \caption{Aurangabad (Left) and Solapur (Right)}
 \end{figure}
 
 
-\section{Aerosol and Trajectories}
-\begin{figure}[H]
-\centering
+\section{Trajectories}
+%\begin{figure}[H]
+%\centering
 %trim=8cm 1cm 10cm 5cm, clip
-\includegraphics[width=3in]{fig/concwinds925-9.png}
-\includegraphics[width=3in]{fig/aod10days-9.png}
-\caption{Dust Forecast (Left) and Aerosol  Optical Depth (Right)}
-\end{figure}
+%\includegraphics[width=3in]{fig/concwinds925-9.png}
+%\includegraphics[width=3in]{fig/aod10days-9.png}
+%\caption{Dust Forecast (Left) and Aerosol  Optical Depth (Right)}
+%\end{figure}
 
 \begin{figure}[H]
 \centering
-%trim=8cm 1cm 10cm 5cm, clip
-\includegraphics[width=3in, trim=2cm 3cm 3cm 5cm, clip]{manual_fig/backward.pdf}
-\includegraphics[width=3in, trim=2cm 3cm 3cm 5cm, clip]{manual_fig/forward.pdf}
+%[width=4in, height=6in, trim=2cm 3cm 3cm 5cm, clip]
+\includegraphics[width=4in, height=5in]{manual_fig/backward}
+\includegraphics[width=4in, height=5in]{manual_fig/forward}
 \caption{84 hours Trajectories.}
 \end{figure}
 
@@ -294,16 +258,16 @@ CAIPEEX Met. brief. for \today\\
 \begin{figure}[H]
 \centering
 %trim=8cm 1cm 10cm 5cm, clip
-\includegraphics[width=3in, height=3.5in]{{fig/Aurangabad.000016}.png}
-\includegraphics[width=3in, height=3.5in]{{fig/Aurangabad.000018}.png}
+\includegraphics[width=5in, height=6in]{{fig/Aurangabad.000016}.png}
+\includegraphics[width=5in, height=6in]{{fig/Aurangabad.000018}.png}
 \caption{Skewt-T plots for Aurangabad.}
 
 \end{figure}
 \begin{figure}[H]
 \centering
 %trim=8cm 1cm 10cm 5cm, clip
-\includegraphics[width=3in, height=3.5in]{{fig/Solapur.000016}.png}
-\includegraphics[width=3in, height=3.5in]{{fig/Solapur.000018}.png}
+\includegraphics[width=5in, height=6in]{{fig/Solapur.000016}.png}
+\includegraphics[width=5in, height=6in]{{fig/Solapur.000018}.png}
 \caption{Skewt-T plots for Solapur.}
 \end{figure}
 
@@ -311,8 +275,8 @@ CAIPEEX Met. brief. for \today\\
 \begin{figure}[H]
 \centering
 %trim=8cm 1cm 10cm 5cm, clip
-\includegraphics[width=3in, height=3in, trim=0cm 9cm 6cm 0cm, clip]{{fig/cape.000019}.png}
-\includegraphics[width=3in, height=3in, trim=0cm 9cm 6cm 0cm, clip]{{fig/cine.000019}.png}
+\includegraphics[width=5in, height=5in, trim=0cm 9cm 6cm 0cm, clip]{{fig/cape.000019}.png}
+\includegraphics[width=5in, height=5in, trim=0cm 9cm 6cm 0cm, clip]{{fig/cine.000019}.png}
 \caption{CAPE and CINE at 06 UTC }
 \end{figure}
 
@@ -323,8 +287,8 @@ CAIPEEX Met. brief. for \today\\
 \begin{figure}[H]
 \centering
 %trim=8cm 1cm 10cm 5cm, clip
-\includegraphics[width=3in, height=3in, trim=0cm 9cm 6cm 0cm, clip]{{fig/mdbz.000019}.png}
-\includegraphics[width=3in, height=3in, trim=0cm 9cm 6cm 0cm, clip]{{fig/mdbz.000021}.png}
+\includegraphics[width=5in, height=5in, trim=0cm 9cm 6cm 0cm, clip]{{fig/mdbz.000019}.png}
+\includegraphics[width=5in, height=5in, trim=0cm 9cm 6cm 0cm, clip]{{fig/mdbz.000021}.png}
 \caption{Max dBZ at 06 UTC and 08 UTC.}
 \end{figure}
 
@@ -340,7 +304,7 @@ CAIPEEX Met. brief. for \today\\
 
 
 
-\subsection*{Precipitation Tendency and LCL}
+%\subsection*{Precipitation Tendency and LCL}
 
 %\begin{figure}[H]
 %\centering
@@ -353,8 +317,8 @@ CAIPEEX Met. brief. for \today\\
 \begin{figure}[H]
 \centering
 %trim=8cm 1cm 10cm 5cm, clip
-\includegraphics[width=3in, height=3in, trim=0cm 9cm 6cm 0cm, clip]{{fig/lcl.000019}.png}
-\includegraphics[width=3in, height=3in, trim=0cm 9cm 6cm 0cm, clip]{{fig/lcl.000021}.png}
+\includegraphics[width=5in, height=5in, trim=0cm 9cm 6cm 0cm, clip]{{fig/lcl.000019}.png}
+\includegraphics[width=5in, height=5in, trim=0cm 9cm 6cm 0cm, clip]{{fig/lcl.000021}.png}
 \caption{ LCL at 06 UTC 08 UTC}
 \end{figure}
 
@@ -364,11 +328,18 @@ CAIPEEX Met. brief. for \today\\
 \begin{figure}[H]
 \centering
 %trim=8cm 1cm 10cm 5cm, clip
-\includegraphics[width=2.5in, height=2.0in]{manual_fig/radarppi}
-\includegraphics[width=2.5in, height=2.0in]{manual_fig/radar24}
-\caption{Radar images close range dBZ (left) hourly accumulated rainfall (right).}
+\includegraphics[width=7in, height=5in]{manual_fig/radarppi}
+%\includegraphics[width=2.5in, height=2.0in]{manual_fig/radar24}
+\caption{Radar image. }
+%(left) hourly accumulated rainfall (right).
 \end{figure}
 
+\section{Rain Gauge Network}
+\begin{figure}[H]
+\centering
+\includegraphics[width=6in, height=6in]{fig_obs/rain-gauge_output}
+\caption{24-hour accumulation shown with bubble size and color (top), 24Hr cumulative rainfall (bottom).}
+\end{figure}
 
 %\section{Satellite Pass}
 
