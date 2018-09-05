@@ -14,11 +14,11 @@ convert onset_SW.gif onset_SW.png
 
 curl -O http://imdpune.gov.in/Seasons/Pre_Monsoon/seasonal-rain.jpg
 
-curl -O http://www.ncmrwf.gov.in/Data/mihir/Dust-Forecast/concwinds925.gif
-convert concwinds925.gif concwinds925.png
+#curl -O http://www.ncmrwf.gov.in/Data/mihir/Dust-Forecast/concwinds925.gif
+#convert concwinds925.gif concwinds925.png
 
-curl -O http://www.ncmrwf.gov.in/Data/mihir/Dust-Forecast/aod10days.gif
-convert aod10days.gif aod10days.png 
+#curl -O http://www.ncmrwf.gov.in/Data/mihir/Dust-Forecast/aod10days.gif
+#convert aod10days.gif aod10days.png 
 
 #curl -O http://www.ncmrwf.gov.in/Data/mihir/Soil-Moisture/soilm_7days.gif
 #convert soilm_7days.gif soilm_7days.png 
@@ -57,9 +57,9 @@ curl -O http://satellite.imd.gov.in/img/3Dhum_prof620_a1.jpg
 #convert SOLAPUR.gif SOLAPUR.png
 
 #IMD forecast Product
-curl -O http://nwp.imd.gov.in/wrf/WRFd01-CAPE_06.png 
-curl -O http://nwp.imd.gov.in/wrf/WRFd01-CIN_06.png
-curl -O http://nwp.imd.gov.in/wrf/WRFd01-LCL_06.png 
+#curl -O http://nwp.imd.gov.in/wrf/WRFd01-CAPE_06.png 
+#curl -O http://nwp.imd.gov.in/wrf/WRFd01-CIN_06.png
+#curl -O http://nwp.imd.gov.in/wrf/WRFd01-LCL_06.png 
 
 
 #GFS Forecast
@@ -81,25 +81,27 @@ convert AGD-meteogram.gif AGD-meteogram.png
 
 #Solapur WRF forecast from Gayatri
 DATE=$(date -v -1d '+%Y%m%d')
-curl -O http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/skew/Solapur.000016.png
-curl -O http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/skew/Aurangabad.000016.png
+curl -O http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/skew/Solapur.000016.png
+curl -O http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/skew/Aurangabad.000016.png
 
-curl -O http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/skew/Solapur.000018.png
-curl -O http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/skew/Aurangabad.000018.png
+curl -O http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/skew/Solapur.000018.png
+curl -O http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/skew/Aurangabad.000018.png
 
-curl -O http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/cape/cape.000019.png
-curl -O http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/cine/cine.000019.png
-curl -O http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/mdbz/mdbz.000019.png
-curl -O http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/WLD/wld.000019.png
-curl -O http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/precit/precipt.000018.png
-curl -O http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/lclh/lcl.000019.png
+curl -O http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/cape/cape.000019.png
+curl -O http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/cine/cine.000019.png
+curl -O http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/mdbz/mdbz.000019.png
+curl -O http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/WLD/wld.000019.png
+curl -O http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/precit/precipt.000018.png
+curl -O http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/lclh/lcl.000019.png
 
-curl -O http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/cape/cape.000021.png
-curl -O http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/cine/cine.000021.png
-curl -O http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/mdbz/mdbz.000021.png
-curl -O http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/WLD/wld.000021.png
-curl -O http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/precit/precipt.000020.png
-curl -O http://103.251.186.33/~caipeex/wrf/$DATE-12/d3/lclh/lcl.000021.png
+curl -O http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/cape/cape.000021.png
+curl -O http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/cine/cine.000021.png
+curl -O http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/mdbz/mdbz.000021.png
+curl -O http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/WLD/wld.000021.png
+curl -O http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/precit/precipt.000020.png
+curl -O http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/lclh/lcl.000021.png
+curl -O http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/qvap/MR.000017.png
+curl -O http://103.251.186.33/~caipeex/wrf/$DATE-18/d3/lwp/lwp_iwp.000014.png
 
 #Get Solapur data figures
 cd ../fig_obs
