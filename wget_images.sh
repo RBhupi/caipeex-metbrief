@@ -1,8 +1,8 @@
 #!/bin/sh
 #' @author Bhupendra Raut
 #' June 28, 2018
-#wget -N http://www.imd.gov.in/section/nhac/dynamic/allindianew.pdf
-#wget -N http://satellite.imd.gov.in/dynamic/satbltn.pdf
+wget -N http://www.imd.gov.in/section/nhac/dynamic/allindianew.pdf
+wget -N http://satellite.imd.gov.in/dynamic/satbltn.pdf
 
 mkdir fig
 cd fig
@@ -95,7 +95,7 @@ wget -N http://103.251.186.33/~caipeex/wrf/$DATE-18/lclh/lcl.000015.png
 #wget -N http://103.251.186.33/~caipeex/wrf/$DATE-18/cine/cine.000021.png
 wget -N http://103.251.186.33/~caipeex/wrf/$DATE-18/mdbz/mdbz.000017.png
 wget -N http://103.251.186.33/~caipeex/wrf/$DATE-18/WLD/wld.000017.png
-wget -N http://103.251.186.33/~caipeex/wrf/$DATE-18/precit/precipt.000020.png
+#wget -N http://103.251.186.33/~caipeex/wrf/$DATE-18/precit/precipt.000020.png
 wget -N http://103.251.186.33/~caipeex/wrf/$DATE-18/lclh/lcl.000017.png
 wget -N http://103.251.186.33/~caipeex/wrf/$DATE-18/qvap/MR.000017.png
 wget -N http://103.251.186.33/~caipeex/wrf/$DATE-18/lwp/lwp_iwp.000014.png
@@ -106,9 +106,9 @@ wget -N http://103.251.186.33/~caipeex/wrf/$DATE-18/lwp/lwp_iwp.000014.png
 #Get Solapur data figures
 cd ../fig_obs
 DATE=`date -d "today 13:00" '+%Y%m%d'`
-#wget -N http://103.251.186.33/\~caipeex/solapur/rsonde/skewT_25062018.png
+#wget -N http://103.251.186.33/\~caipeex/solapur/rsonde/skewT_$DATE.png
 
-wget http://103.251.186.33/\~caipeex/radarimages/radar_images2/20190607/2019060703095301dBZ.ppi.png -O radarppi.png
+wget http://103.251.186.33/\~caipeex/radarimages/radar_images2/$DATE/2019060703095301dBZ.ppi.png -O radarppi.png
 
 
 DATE=`date -d "today 13:00" '+%Y-%m-%d'`
@@ -116,4 +116,4 @@ wget -N http://103.251.186.33/\~caipeex/rainfall/rain-gauge_output_$DATE.pdf -O 
 
 cd ..
 
-#pdflatex metbrief.tex
+pdflatex metbrief.tex
