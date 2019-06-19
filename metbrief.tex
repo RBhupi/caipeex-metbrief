@@ -26,7 +26,7 @@
 \usepackage{amssymb,amsmath} % Math packages
 \usepackage{multicol} % Required for the three-column layout of the document
 \usepackage{url} % Clickable links
-\usepackage[hidelinks]{hyperref} % Link colors and PDF behavior in Acrobat
+\usepackage[hidelinks, colorlinks = true]{hyperref} % Link colors and PDF behavior in Acrobat
 \usepackage{fancyhdr} % Required to define custom headers/footers
 \pagestyle{fancy} % Enables the custom headers/footers for all pages following this
 \usepackage{float}
@@ -38,13 +38,13 @@
 %-----------------------------------------------------------
 % Header and footer
 \lfoot{\footnotesize % Left footer containing newsletter contact information
-CAIPEEX Met. brief. for \today\\
-\href{http://www.tropmet.res.in/}{tropmet.res.in/}
+CAIPEEX Met. brief. for \today | contributors Bhupendra Raut \hfill Page \thepage\\
+%\href{http://www.tropmet.res.in/}{tropmet.res.in/}
 }
 
 \cfoot{} % Empty center footer
-
-\rfoot{\footnotesize ~\\ Page \thepage} % Right footer - page counter
+\rfoot{}
+%\rfoot{\footnotesize ~\\ Page \thepage} % Right footer - page counter
 \fancyhead{}
 
 \renewcommand{\headrulewidth}{0.0pt} % No horizontal rule for the header
@@ -92,7 +92,7 @@ CAIPEEX Met. brief. for \today\\
 
 %}
 \begin{multicols}{3} % Begin the three-column layout
-\tableofcontents
+\includegraphics[width=3.2in, height=3.8in]{fig/onset_SW.png}
 \SepRule % Small horizontal rule after the main news item
 \vspace{0.3cm}
 
@@ -109,101 +109,35 @@ CAIPEEX Met. brief. for \today\\
 \begin{itemize}
 \input{./text/IMD_summary.tex}
 \end{itemize}
-
 \end{multicols}
 
+
+
+
+\section{Synoptic Charts}
+%\subsection*{GFS Wind Forecast}
 \begin{figure}[H]
 \centering
-\includegraphics[width=4in, height=5in]{fig/seasonal-rain}
-\includegraphics[width=4in, height=4in]{fig/onset_SW.png}
-\caption{Seasonal rainfall and Monsoon onset dates (normal and actual).}
+\includegraphics[width=3.8in, height=3in]{fig/06hgfs_mslp}
+\includegraphics[width=3.8in, height=3in]{fig/06hgfs_850wind}\\
+\includegraphics[width=3.8in, height=3in]{fig/06hgfs_500wind}
+\includegraphics[width=3.8in, height=3in]{fig/06hgfs_200wind}
+\caption{GFS wind forecast at 850, 500 and 200 hPa levels.}
 \end{figure}
 
 
-
-
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=3in, height=4in]{fig/all-india.png}
-%\includegraphics[width=3in, height=4in]{fig/homo.png}
-%\caption{All India  (Left) and Homogeneous rainfall (Right)}
-%\end{figure}
 
 
 
 \section{Satellite Inference}
 \begin{figure}[H]
 \centering
-\includegraphics[width=4in]{fig/3DRasiasec_vis}
-\includegraphics[width=4in]{fig/3Dasiasec_ctbt}
-\caption{VIS image and IR cloud top temperatures.}
+\includegraphics[width=4in, height=3.2in, page=1, trim=1cm 10cm 1cm 6cm, clip]{satbltn.pdf}
+\includegraphics[width=4in, height=3.2in]{fig/3Dasiasec_ctbt}\\
+\includegraphics[height=3in, trim=10cm 4cm 6cm 4cm, clip]{fig/3Dhum_prof620_a1}
+\caption{Salient Features in IR, IR CTBT and Mid-level moisture from rapid. \href{http://satellite.imd.gov.in/img/3Dswsec_swir.jpg}{Click here for latest HiRes SWIR image.}}
 \end{figure}
 
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=6in]{fig/3Dhum_prof620_a1}
-
-\caption{ Rapid.}
-\end{figure}
-
-
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=3in, trim=8cm 1cm 3cm 1cm, clip]{fig/3D_lowcon.jpg}
-%\includegraphics[width=3in, trim=8cm 1cm 3cm 1cm, clip]{fig/3D_updiv.jpg}
-
-%\caption{Low level convergence (Left), Upeer level divergence  (Right).}
-%\end{figure}
-
-\section{Forecast}
-
-%\subsection*{NUCM Temperature Forecast}
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=3in]{fig/ncum_fcst_Tmax_day-1.png}
-%\includegraphics[width=3in]{fig/ncum_fcst_Tmin_day-1.png}
-%\caption{Maximum and minimum temperature}
-%\end{figure}
-
-
-\subsection*{GFS Wind Forecast}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=5in]{fig/con-spr-wind_zonal850-0.png}
-\includegraphics[width=5in]{fig/con-spr-wind_zonal200-0.png}
-\caption{GFS Forecast. Winds at 850 hPa and 200 hPa levels.}
-\end{figure}
-
-
-\subsection*{IMD WRF Forecast}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=3in, height=3in, trim=20cm 5cm 10cm 4cm, clip]{fig/WRFd02-03-RAIN_06.png}
-\includegraphics[width=3in, height=3in, trim=20cm 5cm 10cm 4cm, clip]{fig/WRFd02-ZWd850_06.png}
-\includegraphics[width=3in, height=3in, trim=20cm 5cm 10cm 4cm, clip]{fig/WRFd02-ZWd500_06.png}
-%\includegraphics[width=2.5in, height=2.5in, trim=20cm 5cm 10cm 4cm, clip]{fig/WRFd02-ZWd200_06.png}
-\caption{Geopotential height, wind and isotach at 850 hPa, 500 hPa.}
-\end{figure}
-
-
-
-
-
-
-
-%\subsection*{IMD Thermodynamics Forecast (CAPE, CINE, LCLH)}% (Observations and Forecast) }
-%\begin{figure}[H]
-%\centering
-%\fbox{\includegraphics[width=5in, trim=15cm 5cm 8cm 10cm, clip]{fig/WRFd01-CAPE_06.png}} \hskip 0.1cm
-%
-%\fbox{\includegraphics[width=5in, trim=15cm 5cm 8cm 10cm, clip]{fig/WRFd01-CIN_06.png}}\\
-%\vskip 0.1cm
-%\fbox{\includegraphics[width=5in, trim=15cm 5cm 8cm 10cm, clip]{fig/WRFd01-LCL_06.png}}
-%\caption{IMD Forecast products CAPE (left), CINE (right) and  LCLH (bottom)}
-%\end{figure}
 
 
 %\begin{figure}[H]
@@ -213,45 +147,33 @@ CAIPEEX Met. brief. for \today\\
 %\end{figure}
 
 
-\subsection*{IMD Meteogram}
-\begin{figure}[H]
-\centering
-%trim=8cm 1cm 10cm 5cm, clip
-%[width=3in, height=6in, trim=0 0 25cm 0, clip]
-\includegraphics[width=4in, height=6in, trim=0 0 10in 0, clip]{fig/SLP-meteogram}
-%\includegraphics[width=6in, height=6in]{fig/SLP-meteogram}
-\caption{Meteogram for Solapur}
-\end{figure}
 
-
-\section{Trajectories}
-%\begin{figure}[H]
-%\centering
-%trim=8cm 1cm 10cm 5cm, clip
-%\includegraphics[width=3in]{fig/concwinds925-9.png}
-%\includegraphics[width=3in]{fig/aod10days-9.png}
-%\caption{Dust Forecast (Left) and Aerosol  Optical Depth (Right)}
-%\end{figure}
+\section{Dust and HYSPLIT Trajectories}
 
 \begin{figure}[H]
 \centering
 %[width=4in, height=6in, trim=2cm 3cm 3cm 5cm, clip]
-\includegraphics[width=5in, height=6in]{manual_fig/backward}
-\includegraphics[width=5in, height=6in]{manual_fig/forward}
-\caption{84 hours Trajectories.}
+\includegraphics[width=3in, trim=5cm 0cm 6cm 0cm, clip]{fig/dust-10}
+\includegraphics[height=3in, trim=2cm 3cm 3cm 5cm, clip]{manual_fig/backward}
+\includegraphics[height=3in, trim=2cm 3cm 3cm 5cm, clip]{manual_fig/forward}
+\caption{Dust Forecast and 48 hours Trajectories.}
 \end{figure}
 
 
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=6in, trim=0cm 3cm 0cm 0cm, clip]{fig/soilm_7days.png}
-%\caption{Soil moisture}
-%\end{figure}
+
+\section{IMD Meteogram}
+\begin{figure}[H]
+\centering
+%[width=3in, height=6in, trim=0 0 25cm 0, clip]
+\includegraphics[width=6in]{fig/SLP-meteogram}
+\caption{Meteogram for Solapur}
+\end{figure}
 
 
 
-\section{WRF Mesoscale Forecast}
+
+\section{IITM WRF Mesoscale Forecast}
 \subsection*{Skew-T Plots}
 \begin{figure}[H]
 \centering
@@ -263,35 +185,35 @@ CAIPEEX Met. brief. for \today\\
 \end{figure}
 
 
-\subsection*{CAPE and CINE}
+\subsection*{CAPE and Max dBZ}
 \begin{figure}[H]
 \centering
 %trim=8cm 1cm 10cm 5cm, clip
-
-\includegraphics[width=5in, height=5in, trim=0cm 9cm 6cm 0cm, clip]{{fig/cape.000015}.png}
-\includegraphics[width=5in, height=5in, trim=0cm 9cm 6cm 0cm, clip]{{fig/cine.000015}.png}
-\caption{CAPE and CINE at 06 UTC }
+\includegraphics[height=2.7in, trim=0cm 9cm 6cm 0cm, clip]{{fig/cape.000015}.png}
+\includegraphics[height=2.7in, trim=0cm 9cm 6cm 0cm, clip]{{fig/cape.000017}.png}
+\caption{CAPE at 06 and 08 UTC }
 \end{figure}
 
 
-
-
-\subsection*{Max dBZ and Other Moisture Parameters}
-
 \begin{figure}[H]
 \centering
 %trim=8cm 1cm 10cm 5cm, clip
-\includegraphics[width=5in, height=5in, trim=0cm 9cm 6cm 0cm, clip]{{fig/mdbz.000015}.png}
-\includegraphics[width=5in, height=5in, trim=0cm 9cm 6cm 0cm, clip]{{fig/mdbz.000017}.png}
+\includegraphics[width=4in, height=3in, trim=0cm 9cm 6cm 0cm, clip]{{fig/mdbz.000015}.png}
+\includegraphics[width=4in, height=3in, trim=0cm 9cm 6cm 0cm, clip]{{fig/mdbz.000017}.png}
 \caption{Max dBZ at 06 UTC and 08 UTC.}
 \end{figure}
 
+
+
+\subsection*{Moisture Parameters}
+
 \begin{figure}[H]
 \centering
 %trim=8cm 1cm 10cm 5cm, clip
-\includegraphics[width=8in, height=7in]{{fig/lwp_iwp.000014}.png}
+\includegraphics[width=8in, trim=0in 10in 0in 10in, clip]{{fig/lwp_iwp.000014}.png}
 \caption{LWP and IWL at 07 UTC.}
 \end{figure}
+
 
 \begin{figure}[H]
 \centering
@@ -301,47 +223,32 @@ CAIPEEX Met. brief. for \today\\
 \end{figure}
 
 
+
+
+\subsection*{LCL and WLD}
+
+\begin{figure}[H]
+\centering
+%trim=8cm 1cm 10cm 5cm, clip
+\includegraphics[height=2.7in, trim=0cm 9cm 6cm 0cm, clip]{{fig/lcl.000015}.png}
+\includegraphics[height=2.7in, trim=0cm 9cm 6cm 0cm, clip]{{fig/lcl.000017}.png}
+\caption{ LCL at 08 UTC and 10 UTC}
+\end{figure}
+
+
 \begin{figure}[H]
 \centering
 %trim=0cm 9cm 6cm 0cm
-\includegraphics[width=4in, height=4in]{{fig/wld.000015}.png}
-\includegraphics[width=4in, height=4in]{{fig/wld.000017}.png}
-\caption{Warm layer depth at 06 UTC and 08 UTC.}
+\includegraphics[height=3in]{{fig/wld.000015}.png}
+\includegraphics[height=3in]{{fig/wld.000017}.png}
+\caption{Warm layer depth at 08 UTC and 10 UTC.}
 \end{figure}
 
 
 
-%\subsection*{Precipitation Tendency and LCL}
+\section{Solapur Observations}
 
-%\begin{figure}[H]
-%\centering
-%trim=8cm 1cm 10cm 5cm, clip
-%\includegraphics[width=3in, height=3in, trim=0cm 9cm 6cm 0cm, clip]{{fig/precipt.000019}.png}
-%\includegraphics[width=3in, height=3in, trim=0cm 9cm 6cm 0cm, clip]{{fig/precipt.000021}.png}
-%\caption{Precip tendency at 06 UTC 08 UTC}
-%\end{figure}
-
-\begin{figure}[H]
-\centering
-%trim=8cm 1cm 10cm 5cm, clip
-\includegraphics[width=5in, height=5in, trim=0cm 9cm 6cm 0cm, clip]{{fig/lcl.000015}.png}
-\includegraphics[width=5in, height=5in, trim=0cm 9cm 6cm 0cm, clip]{{fig/lcl.000017}.png}
-\caption{ LCL at 06 UTC 08 UTC}
-\end{figure}
-
-
-\section{Solapur Radar}
-%\subsection*{Radar}
-\begin{figure}[H]
-\centering
-%trim=8cm 1cm 10cm 5cm, clip
-\includegraphics[width=10in, height=6in]{fig/radarppi}
-\caption{Radar Reflectivity [dBZ] PPI .}
-\end{figure}
-
-
-
-\section{Rain Gauge Network}
+\subsection*{Rain Gauge Network}
 \begin{figure}[H]
 \centering
 \includegraphics[width=6in, height=6in]{fig/rain-gauge_output}
@@ -349,19 +256,36 @@ CAIPEEX Met. brief. for \today\\
 
 \end{figure}
 
-%\section{Satellite Pass}
 
-%\begin{figure}[H]
-%\centering
+\subsection*{Radar}
+\begin{figure}[H]
+\centering
 %trim=8cm 1cm 10cm 5cm, clip
-%\includegraphics[width=3in, height=2.5in]{manual_fig/sat_pass}
-%\includegraphics[width=3in, height=2.5in]{manual_fig/sat_pass_table}
-%\caption{Terra satellite pass over our site 05:40 UTC.}
-%\end{figure}
+\includegraphics[width=5in]{fig/caz_slp}
+\includegraphics[width=5in]{fig/vp2_slp}
+%\caption{Radar Reflectivity [dBZ] PPI .}
+\end{figure}
+
+
+
+
+
 
 
 
 \input{./text/outlook.tex}
+
+
+\section{Satellite Pass}
+
+\begin{figure}[H]
+\centering
+%trim=8cm 1cm 10cm 5cm, clip
+\includegraphics[width=6in]{manual_fig/sat_pass}
+%\includegraphics[width=3in, height=2.5in]{manual_fig/sat_pass_table}
+\caption{GPM satellite pass over our site 09:14 UTC.}
+\end{figure}
+
 
 
 %----------------------------------------------------------------------------------------
